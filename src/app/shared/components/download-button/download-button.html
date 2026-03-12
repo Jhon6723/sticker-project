@@ -1,0 +1,22 @@
+@if (sticker) {
+<div class="download-container">
+  <div class="download-buttons">
+    <!-- Descargar como GIF -->
+    <button 
+      class="download-btn gif-btn"
+      (click)="downloadAsGif()"
+      [disabled]="loading || !animationData">
+      <span class="btn-icon">🎬</span>
+      <span class="btn-text">Download as GIF</span>
+    </button>
+  </div>
+
+  <!-- Loading indicator -->
+  @if (loading) {
+  <div class="loading-indicator">
+    <span class="spinner"></span>
+    <span>Processing download...</span>
+  </div>
+  }
+</div>
+}
